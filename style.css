@@ -1,0 +1,40 @@
+
+body {
+    margin: 0;
+    font-family: 'Rubik', sans-serif;
+    color: #000000;
+}
+
+.navbar-brand img {
+    max-width: 150px;
+}
+
+.bg-light {
+    padding: 80px;
+    background-color: #f8f9fa;
+}
+
+.btn-primary, .btn-success {
+    color: #fff;
+    background-color: #000000;
+    border-color: #000000;
+}
+
+.carousel-item img {
+    object-fit: cover;
+    height: 500px;
+}
+
+.section-title {
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+.feature img {
+    width: 80px;
+    margin-bottom: 20px;
+}
+
+footer {
+    background-color: #212529
+}

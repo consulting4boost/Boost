@@ -1,110 +1,56 @@
-/* Estilos generales del cuerpo */
 body {
     margin: 0;
     font-family: 'Rubik', sans-serif;
     color: #000000;
 }
 
-/* Estilos para la marca del navbar */
 .navbar-brand img {
     max-width: 150px;
 }
 
-/* Estilos para el fondo claro */
 .bg-light {
-    padding: 80px;
     background-color: #f8f9fa;
 }
+/* Efecto de sombra y zoom en las tarjetas */
+.card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
 
-/* Botones personalizados */
+.card:hover {
+    transform: scale(1.05); /* Zoom suave */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3); /* Sombra */
+}
+
 .btn-primary, .btn-success {
     color: #fff;
     background-color: #000000;
     border-color: #000000;
 }
 
-/* Estilo de las imágenes del carrusel */
-.carousel-item img {
+.card-img-top {
     object-fit: cover;
-    height: 500px;
+    height: 200px;
 }
 
-/* Título de las secciones */
-.section-title {
-    margin-bottom: 2rem;
-    text-align: center;
+.card {
+    border: none;
 }
 
-/* Estilos de las imágenes destacadas de las características */
-.feature img {
-    width: 80px;
-    margin-bottom: 20px;
+.card-title {
+    font-size: 1.2rem;
+    font-weight: bold;
 }
 
-/* Estilos para el footer */
 footer {
     background-color: #212529;
+    color: white;
 }
 
-/* Ocultar imágenes del carrusel en pantallas pequeñas (menor a 768px) */
-@media (max-width: 768px) {
-    /* Ocultar las imágenes del carrusel en móviles */
-    .carousel-item img {
-        display: none; /* Oculta las imágenes */
-    }
-
-    /* Mantener el texto del carrusel visible */
-    .carousel-caption {
-        position: static; /* Cambia la posición para no superponer */
-        padding: 20px; /* Añadir espacio alrededor del texto */
-        background-color: rgba(0, 0, 0, 0.5); /* Fondo semitransparente para el texto */
-    }
-
-    /* Color del texto para asegurar su visibilidad */
-    .carousel-caption h5, .carousel-caption p {
-        color: #ffffff; /* Texto en blanco */
-    }
-
-    /* Ajuste para evitar que el texto se quede pegado en móviles */
-    .carousel-caption h5 {
-        font-size: 1.5rem; /* Ajustar el tamaño de la fuente del título */
-    }
-
-    .carousel-caption p {
-        font-size: 1rem; /* Ajustar el tamaño de la fuente del párrafo */
-    }
+footer a {
+    color: white;
+    text-decoration: none;
 }
 
-/* Ajustes adicionales para pantallas pequeñas */
-@media (max-width: 768px) {
-    /* Ajuste del padding de la sección con fondo claro */
-    .bg-light {
-        padding: 40px;
-    }
-
-    /* Ajuste del tamaño de las imágenes de las características en pantallas pequeñas */
-    .feature img {
-        width: 60px;
-    }
-
-    /* Ajustar el padding en la sección "Sobre Nosotros" */
-    #nos {
-        padding: 40px 0;
-    }
-
-    /* Ajustar las imágenes del equipo en la sección "Sobre Nosotros" */
-    #nos img {
-        width: 100%;
-        height: auto;
-    }
-
-    /* Ajustar el footer para pantallas pequeñas */
-    footer {
-        padding: 20px;
-    }
-
-    /* Ajustes en el footer: margen en la sección de contacto */
-    #contacto .col-md-5 {
-        padding-left: 0;
-    }
+footer a:hover {
+    color: #cccccc;
 }

@@ -73,6 +73,7 @@ h2 {
 }
 
 .card-back {
+        font-size: 24px; /* Aquí se agranda la letra */
     background-color: #007bff;
     color: #fff;
     transform: rotateY(180deg);

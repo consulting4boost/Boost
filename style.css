@@ -1,56 +1,156 @@
+/* Estilos globales */
 body {
-    margin: 0;
-    font-family: 'Rubik', sans-serif;
-    color: #000000;
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f9;
+    margin-top: 56px;
+}
+
+.KKL{color: #007bff00;}
+h2 {
+    color: #333;
+}
+
+/* Efecto de navegación */
+.navbar {
+    transition: background-color 0.3s ease;
+}
+
+.navbar-dark.bg-dark {
+    background-color: #212529 !important;
 }
 
 .navbar-brand img {
-    max-width: 150px;
+    transition: transform 0.3s ease;
 }
 
-.bg-light {
-    background-color: #f8f9fa;
+.navbar-brand img:hover {
+    transform: scale(1.1);
 }
-/* Efecto de sombra y zoom en las tarjetas */
+
+/* Estilos de las tarjetas */
+.card-container {
+    perspective: 1000px;
+}
+
 .card {
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    position: relative;
+    width: 100%;
+    height: 300px;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    border-radius: 15px;
+    overflow: hidden;
 }
 
-.card:hover {
-    transform: scale(1.05); /* Zoom suave */
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3); /* Sombra */
+.card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
 }
 
-.btn-primary, .btn-success {
+.card:hover .card-inner {
+    transform: rotateY(180deg);
+}
+
+.card-front, .card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    border-radius: 15px;
+}
+
+.card-front {
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+}
+
+.card-back {
+    background-color: #007bff;
     color: #fff;
-    background-color: #000000;
-    border-color: #000000;
+    transform: rotateY(180deg);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.card-back h5 {
+    margin-bottom: 15px;
+}
+
+.card-back ul {
+    list-style: none;
+    padding: 0;
+}
+
+.card-back ul li {
+    margin-bottom: 10px;
 }
 
 .card-img-top {
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    max-height: 180px;
     object-fit: cover;
-    height: 200px;
 }
 
-.card {
-    border: none;
+/* Botones de contacto en el footer */
+footer a.btn {
+    margin-right: 10px;
+    margin-top: 15px;
 }
 
-.card-title {
-    font-size: 1.2rem;
-    font-weight: bold;
+footer h1 {
+    color: #ffdd57;
 }
 
+/* Secciones */
+#servicios, #nos {
+    background-color: #fff;
+    padding: 60px 0;
+}
+
+#servicios h2, #nos h2 {
+    color: #007bff;
+}
+
+#nos ul {
+    padding-left: 20px;
+}
+
+#nos ul li {
+    margin-bottom: 10px;
+}
+
+/* Estilos para imágenes en "nuestros beneficios" */
+#servicios img {
+    transition: transform 0.3s ease;
+}
+
+#servicios img:hover {
+    transform: scale(1.1);
+}
+
+/* Footer */
 footer {
     background-color: #212529;
-    color: white;
 }
 
-footer a {
-    color: white;
-    text-decoration: none;
+footer .container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
 }
 
-footer a:hover {
-    color: #cccccc;
+footer p {
+    color: #fff;
 }

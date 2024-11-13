@@ -4,7 +4,11 @@ body {
     background-color: #ffffff;
     margin-top: 56px;
 }
-
+.video {
+    width: 100%;      /* Ocupa el 100% del ancho */
+    height: 100vh;    /* Ocupa el 100% de la altura de la ventana */
+    object-fit: cover; /* Asegura que el video cubra toda el área sin distorsionar */
+}
 .KKL {
     font-size: 2em; /* Tamaño grande pero no excesivo */
     color: #333; /* Color neutro y profesional */

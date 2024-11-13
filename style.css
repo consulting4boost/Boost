@@ -4,10 +4,19 @@ body {
     background-color: #ffffff;
     margin-top: 56px;
 }
-.video {
+video {
     width: 100%;      /* Ocupa el 100% del ancho */
     height: 100vh;    /* Ocupa el 100% de la altura de la ventana */
     object-fit: cover; /* Asegura que el video cubra toda el área sin distorsionar */
+}
+
+/* Para pantallas más pequeñas, como teléfonos móviles */
+@media (max-width: 768px) {
+    video {
+        height: auto;     /* Deja que el alto del video sea automático en pantallas pequeñas */
+        min-height: 100%; /* Asegura que el video cubra toda la altura si el alto es menor al de la pantalla */
+        object-fit: contain; /* Hace que el video se ajuste completamente dentro del contenedor sin recortes */
+    }
 }
 .KKL {
     font-size: 2em; /* Tamaño grande pero no excesivo */
